@@ -1,4 +1,4 @@
-{% set version = '0.9-7' %}
+{% set version = '0.10-1' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,12 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/xts_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/xts/xts_{{ version }}.tar.gz
-  sha256: f11f7cb98f4b92b7f6632a2151257914130880c267736ef5a264b5dc2dfb7098
+  sha256: 4221a7b37dd01971d435d970e59b843436ea46989afa4b71fe0181b4136c2dc9
 
 build:
   number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,14 +24,14 @@ build:
 requirements:
   build:
     - r-base
-    - r-zoo >=1.7_10
+    - r-zoo >=1.7_12
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
 
   run:
     - r-base
-    - r-zoo >=1.7_10
+    - r-zoo >=1.7_12
     - libgcc  # [not win]
 
 test:
@@ -41,14 +40,19 @@ test:
     - "\"%R%\" -e \"library('xts')\""  # [win]
 
 about:
-  home: http://r-forge.r-project.org/projects/xts/
+  home: https://github.com/joshuaulrich/xts
   license: GPL (>= 2)
   summary: Provide for uniform handling of R's different time-based data classes by extending
     zoo, maximizing native format information preservation and allowing for user level
     customization and extension, while simplifying cross-class interoperability.
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
+    - cbrueffer
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
