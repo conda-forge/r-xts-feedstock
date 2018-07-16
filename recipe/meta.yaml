@@ -1,5 +1,4 @@
-{% set version = '0.10-1' %}
-
+{% set version = '0.10-2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +9,12 @@ package:
 source:
   fn: xts_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/xts_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/xts/xts_{{ version }}.tar.gz
-  sha256: 4221a7b37dd01971d435d970e59b843436ea46989afa4b71fe0181b4136c2dc9
+    - {{ cran_mirror }}/src/contrib/xts_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/xts/xts_{{ version }}.tar.gz
+  sha256: 8155888319c38e874ed87300decd65570e77ea4a7575136f4690123d3f7321c4
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
   rpaths:
@@ -23,20 +23,24 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('fortran') }}  # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}make
+    - {{posix}}sed  # [win]
+    - {{posix}}coreutils  # [win]
+  host:
     - r-base
     - r-zoo >=1.7_12
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
-
   run:
     - r-base
+    - {{native}}gcc-libs         # [win]
     - r-zoo >=1.7_12
-    - libgcc  # [not win]
 
 test:
   commands:
-    - $R -e "library('xts')"  # [not win]
+    - $R -e "library('xts')"           # [not win]
     - "\"%R%\" -e \"library('xts')\""  # [win]
 
 about:
@@ -51,8 +55,8 @@ about:
 
 extra:
   recipe-maintainers:
-    - cbrueffer
     - johanneskoester
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
