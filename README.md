@@ -14,14 +14,16 @@ Summary: Provide for uniform handling of R's different time-based data classes b
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-xts-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-xts-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-xts-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-xts-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-xts-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-xts-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-xts-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-xts-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-xts-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-xts-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-xts-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-xts-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-xts/badges/version.svg)](https://anaconda.org/conda-forge/r-xts)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-xts/badges/downloads.svg)](https://anaconda.org/conda-forge/r-xts)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--xts-green.svg)](https://anaconda.org/conda-forge/r-xts) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-xts.svg)](https://anaconda.org/conda-forge/r-xts) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-xts.svg)](https://anaconda.org/conda-forge/r-xts) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-xts.svg)](https://anaconda.org/conda-forge/r-xts) |
 
 Installing r-xts
 ================
