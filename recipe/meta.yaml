@@ -1,4 +1,4 @@
-{% set version = "0.12-0" %}
+{% set version = "0.12.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/xts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/xts/xts_{{ version }}.tar.gz
-  sha256: df11e6dad7cf0a266702988fa6127aaf72437da743ca40e9abcd9e6b3d628c60
+  sha256: d680584af946fc30be0b2046e838cff7b3a65e00df1eadba325ca5e96f3dca2c
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,11 +44,9 @@ test:
 about:
   home: https://github.com/joshuaulrich/xts
   license: GPL (>= 2)
-  summary: Provide for uniform handling of R's different time-based data classes by extending
-    zoo, maximizing native format information preservation and allowing for user level
-    customization and extension, while simplifying cross-class interoperability.
+  summary: Provide for uniform handling of R's different time-based data classes by extending zoo, maximizing native format information preservation and allowing for user level customization and extension, while simplifying cross-class interoperability.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
