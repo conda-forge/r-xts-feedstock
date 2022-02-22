@@ -45,10 +45,11 @@ test:
 
 about:
   home: https://github.com/joshuaulrich/xts
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Provide for uniform handling of R's different time-based data classes by extending zoo, maximizing native format information preservation and allowing for user level customization and extension, while simplifying cross-class interoperability.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
