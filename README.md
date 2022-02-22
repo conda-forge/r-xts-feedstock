@@ -3,7 +3,7 @@ About r-xts
 
 Home: https://github.com/joshuaulrich/xts
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-xts-feedstock/blob/master/LICENSE.txt)
 
