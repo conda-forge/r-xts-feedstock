@@ -1,4 +1,4 @@
-{% set version = "0.12.2" %}
+{% set version = "0.13.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/xts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/xts/xts_{{ version }}.tar.gz
-  sha256: 9c287ceaeb758ff4c9596be6a688db5683d50b45e7610e6d068891ca10dca743
+  sha256: 188e4d1d8c3ec56a544dfb9da002e8aac80b9303d0a5a1f62ff0e960aeef9674
 
 build:
   merge_build_host: true  # [win]
