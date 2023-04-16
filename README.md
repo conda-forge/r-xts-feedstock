@@ -1,11 +1,22 @@
+About r-xts-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-xts-feedstock/blob/main/LICENSE.txt)
+
 About r-xts
-===========
+-----------
 
 Home: https://github.com/joshuaulrich/xts
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-xts-feedstock/blob/main/LICENSE.txt)
+Summary: Provide for uniform handling of R's different time-based data classes by extending zoo, maximizing native format information preservation and allowing for user level customization and extension, while simplifying cross-class interoperability.
+About r-xts
+-----------
+
+Home: https://github.com/joshuaulrich/xts
+
+Package license: GPL-2.0-or-later
 
 Summary: Provide for uniform handling of R's different time-based data classes by extending zoo, maximizing native format information preservation and allowing for user level customization and extension, while simplifying cross-class interoperability.
 
