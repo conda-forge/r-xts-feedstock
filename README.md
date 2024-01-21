@@ -3,6 +3,7 @@ About r-xts-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-xts-feedstock/blob/main/LICENSE.txt)
 
+
 About r-xts
 -----------
 
@@ -11,6 +12,7 @@ Home: https://github.com/joshuaulrich/xts
 Package license: GPL-2.0-or-later
 
 Summary: Provide for uniform handling of R's different time-based data classes by extending zoo, maximizing native format information preservation and allowing for user level customization and extension, while simplifying cross-class interoperability.
+
 About r-xts
 -----------
 
@@ -195,7 +197,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
