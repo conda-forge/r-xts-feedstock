@@ -1,4 +1,4 @@
-{% set version = "0.13.2" %}
+{% set version = "0.14.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/xts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/xts/xts_{{ version }}.tar.gz
-  sha256: 4ad590f65c4c9daa7fe920aee0274a23478daacbfcd6edc2566dc392460f1dfb
+  sha256: d28b16eefa9876a815bad3fc204779c197e3a0d7796b8dae8856fe153f5fcfd9
 
 build:
   merge_build_host: true  # [win]
@@ -24,7 +24,9 @@ requirements:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
     - r-zoo                      # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
